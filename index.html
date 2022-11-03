@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Simple Bookmark Manager A clean and simple interface to organize your favourite websites">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Bookmark landing page</title>
+</head>
+<body>
+
+  <a class="skip-nav-link" href="#main-content">
+    Skip navigation
+  </a>
+
+  <nav id="mainNavigation">
+    <div class="container">
+      <div class="flex space-between">
+        <img src="img/logo-bookmark.svg" alt="logo Bookmark" class="logo">
+        <ul role="list" class="nav-items align-center letter-spacing-100 font-weight-500">
+          <li class="nav-item"><a href="#features">FEATURES</a></li>
+          <li class="nav-item"><a href="#">PRICING</a></li>
+          <li class="nav-item"><a href="#contact">CONTACT</a></li>
+          <li class="nav-item"><button class="btn btn-red letter-spacing-100">LOGIN</button></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleMenu();">
+          <img src="img/icon-hamburger.svg" alt="hamburger-button">
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="menu" id="altNavigation">
+    <div class="container">
+      <div class="flex space-between">
+        <a href="#navigation">
+          <img src="img/logo-bookmark.svg" alt="Bookmark">
+        </a>
+        <button class="close" onclick="toggleMenu();">
+          <img src="img/icon-close.svg" alt="exit">
+        </button>
+      </div>
+      <ul role="list" class="text-center">
+        <li><a href="#features" onclick="toggleMenu();">FEATURES</a></li>
+        <li><a href="#">PRICING</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">CONTACT</a></li>
+        <li><button class="btn">LOGIN</button></li>
+      </ul>
+      <div class="flex justify-center">
+        <a href="#">
+          <img src="img/icon-facebook.svg" alt="facebook">
+        </a>
+        <a href="#">
+          <img src="img/icon-twitter.svg" alt="twitter">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="hero">
+    <div class="container">
+      <div class="even-columns flex-grid">
+        <div class="col flex justify-center">
+          <img src="img/illustration-hero-cropped.svg" alt="bookmark hero illustartion">
+  
+        </div>
+        <div class="col flow text-center-sm">
+          <h1 class="text-dark-blue">A Simple Bookmark Manager</h1>
+          <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+          <button class="btn btn-blue font-weight-500">Get it on Chrome</button>
+          <button class="btn btn-gray font-weight-500">Get it on Firefox</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+      <section aria-label="Features" class="features-section" id="features">
+        <div class="container flow-alt">
+          <h2 class="subheader text-dark-blue text-center">Features</h2>
+          <p class="content-width">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+          <ul role="list" class="tab-list text-center">
+            <li class="tab active" data-target="#simpleBookmarking" tabindex="0">Simple Bookmarking</li>
+            <li class="tab" data-target="#speadySearching" tabindex="0">Speady Searching</li>
+            <li class="tab" data-target="#easySharing" tabindex="0">Easy Sharing</li>
+          </ul>
+          <div class="tab-section">
+            <div class="tab-content active" id="simpleBookmarking">
+              <div class="even-columns flex-grid">
+                <div class="col flex justify-center">
+                  <img src="img/illustration-features-tab-1.svg" alt="Simple Bookmarking">
+          
+                </div>
+                <div class="col text-center-sm flow">
+                  <h3 class="subheader text-dark-blue">Bookmard in one click</h3>
+                  <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                  <button class="btn btn-blue font-weight-500">More Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="speadySearching">
+              <div class="even-columns flex-grid">
+                <div class="col flex justify-center">
+                  <img src="img/illustration-features-tab-2.svg" alt="Speady Searching">
+          
+                </div>
+                <div class="col text-center-sm flow">
+                  <h3 class="subheader text-dark-blue">Intelligent search</h3>
+                  <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                  <button class="btn btn-blue font-weight-500">More Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="easySharing">
+              <div class="even-columns flex-grid">
+                <div class="col flex justify-center">
+                  <img src="img/illustration-features-tab-3.svg" alt="Easy Sharing">
+          
+                </div>
+                <div class="col text-center-sm flow">
+                  <h3 class="subheader text-dark-blue">Share your bookmarks</h3>
+                  <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                  <button class="btn btn-blue font-weight-500">More Info</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="Extensions" class="extension-section" id="extensions">
+        <div class="container">
+          <h2 class="subheader text-dark-blue text-center">Download the extension</h2>
+          <p class="content-width">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+          <div class="even-columns flex">
+            <div class="col">
+              <div class="card text-center">
+                <img src="img/logo-chrome.svg" alt="Chrome">
+                <h3 class="text-dark-blue">Add to Chrome</h3>
+                <p>Minimum version 62</p>
+                <img src="img/bg-dots.svg" alt="">
+                <button class="btn btn-blue font-weight-500">Add & Install Extension</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-center">
+                <img src="img/logo-firefox.svg" alt="Firefox">
+                <h3 class="text-dark-blue">Add too Firefox</h3>
+                <p>Minimum version 55</p>
+                <img src="img/bg-dots.svg" alt="">
+                <button class="btn btn-blue font-weight-500">Add & Install Extension</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-center">
+                <img src="img/logo-opera.svg" alt="Opera">
+                <h3 class="text-dark-blue">Add to Opera</h3>
+                <p>Minimum version 46</p>
+                <img src="img/bg-dots.svg" alt="">
+                <button class="btn btn-blue font-weight-500">Add & Install Extension</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="FAQ" class="FAQ-section" id="FAQ">
+        <div class="container flow-alt text-center">
+          <h2 class="subheader text-dark-blue">Frequently Asked Questions</h2>
+          <p class="content-width">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+          <div class="FAQ">
+            <details>
+              <summary>What is Bookmark?</summary>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+            </details>
+            <details>
+              <summary>How can I request a new browser?</summary>
+              <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+            </details>
+            <details>
+              <summary>Is there a mobile app?</summary>
+              <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
+            </details>
+            <details>
+              <summary>What about other Chromium browsers? </summary>
+              <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
+            </details>
+          
+          </div>
+          <button class="btn btn-blue font-weight-500">More info</button>
+        </div>
+      </section>
+
+      <section aria-label="Contact Us" class="contact-section bg-blue-light" id="contact">
+        <div class="container">
+          <p class="text-center letter-spacing-300 font-weight-500 text-white">35,000+ already joined</p>
+          <h2  class="subheader text-center font-weight-500 text-white">Stay up-to-date with what we're doing</h2>
+          <form novalidate>
+            <div class="form-group">
+              <label for="emailInput">
+                <input type="email" id="emailInput" placeholder="Enter your email address" pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" required>
+                <div class="error"></div>
+              </label>
+              <button class="btn btn-red font-weight-500">Contact Us</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+  </main>
+
+  <footer class="bg-blue-dark">
+    <div class="container">
+      <div class="flex-grid">
+        <div class="nav">
+          <ul role="list" class="nav-items text-center letter-spacing-100 font-weight-400 text-white flex-grid">
+            <!-- <li><img src="img/" alt=""></li> -->
+            <li><a href="#features">FEATURES</a></li>
+            <li><a href="#">PRICING</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="logos">
+          <ul role="list" class="nav-items">
+            <li><a href="#"><img src="img/icon-facebook.svg" alt="facebook"></a></li>
+            <li><a href="#"><img src="img/icon-twitter.svg" alt="twitter"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
