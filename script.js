@@ -5,7 +5,7 @@ let form = document.querySelector('form');
 let formGroup = document.querySelector('.form-group');
 let menu = document.querySelector('.menu');
 let error = document.querySelector('.error');
-let pattern = /[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}/;
+let pattern = /^("(?:[!#-\[\]-\u{10FFFF}]|\\[\t -\u{10FFFF}])*"|[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}](?:\.?[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}])*)@([!#-'*+\-/-9=?A-Z\^-\u{10FFFF}](?:\.?[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}])*|\[[!-Z\^-\u{10FFFF}]*\])$/u;
 
 
 ["click", "keypress"].forEach(eventTrigger => {
